@@ -1,9 +1,11 @@
 Template.MultiSelect.onRendered(function () {
-  this.$('select').multiselect(this.data.selectOptions);
+  this.select = $(this.firstNode);
+
+  this.select.multiselect(this.data.selectOptions);
 
   this.autorun(() => {
     let data = Template.currentData();
-    $('select').multiselect('dataprovider', data.options);
+    this.select.multiselect('dataprovider', data.options);
   });
 });
 
@@ -22,4 +24,9 @@ Template.MultiSelect.helpers({
 
     return attributes;
   }
+});
+
+
+Template.MultiSelect.onDestroyed(function () {
+  this.select.multiselect('destroy');
 });

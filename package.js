@@ -1,6 +1,6 @@
 Package.describe({
   name: 'jss:bootstrap-multi-select',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'Bootstrap multi select wrapper for Meteor',
   git: 'https://github.com/JSSolutions/meteor-bootstrap-multi-select',
   documentation: 'README.md'
